@@ -27,7 +27,7 @@
             <div class="row input">
                 <div class="col-4">
                     <input id="more" v-model="addToList" v-on:keyup.enter="add"
-                    type="text" placeholder="Anything you need to do?">
+                    type="text" placeholder="Devi fare qualcosa di particolare?">
                 </div>
                 <div class="col-2">
                     <button @click="add">Aggiungi</button>
@@ -38,7 +38,7 @@
                 <div class="todo col-12">
                     <div v-for="(thingsToDo, index) in todo" class="things">
                         {{ thingsToDo }}
-                        <span><i @click="remove(index)" class="fas fa-times"></i></span>
+                        <div><i @click="remove(index)" class="fas fa-times"></i></div>
                     </div>
                 </div>
             </div>
