@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.logo-row, .input {
+    margin-bottom: 30px;
+}
+
+.row {
+    justify-content: center;
+}
+
+.row > div > * {
+    width: 100%;
+}
+
+.input div {
+    display: inline-block;
+}
+
+.input div > * {
+    border-radius: 10px;
+    height: 40px;
+    text-align: center;
+}
+
+.input input {
+    outline: none;
+}
+
+.todo {
+    background-color: #f5f7f7;
+    padding: 30px;
+    text-align: left;
+    border-radius: 15px;
+}
+
+.things {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+}
