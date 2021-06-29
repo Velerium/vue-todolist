@@ -26,18 +26,19 @@
 
             <div class="row input">
                 <div class="col-4">
-                    <input type="text" placeholder="Anything you need to do?">
+                    <input id="more" v-model="addToList" v-on:keyup.enter="add"
+                    type="text" placeholder="Anything you need to do?">
                 </div>
                 <div class="col-2">
-                    <button>Aggiungi</button>
+                    <button @click="add">Aggiungi</button>
                 </div>
             </div>
 
             <div class="row">
                 <div class="todo col-12">
-                    <div v-for="thingsToDo in todo" class="things">
+                    <div v-for="(thingsToDo, index) in todo" class="things">
                         {{ thingsToDo }}
-                        <span><i class="fas fa-times"></i></span>
+                        <span><i @click="remove(index)" class="fas fa-times"></i></span>
                     </div>
                 </div>
             </div>
